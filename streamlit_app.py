@@ -15,11 +15,14 @@ import streamlit as st,numpy as np,time
 
 # Import library yang diperlukan setelah dependensi terinstal
 import nltk
+nltk.download('punkt')
 from nltk.sentiment import SentimentIntensityAnalyzer
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import re
+
+
 
 # Fungsi untuk membersihkan teks dari karakter khusus, mengubah menjadi huruf kecil, dan melakukan lemmatisasi
 def preprocess_text(text):
