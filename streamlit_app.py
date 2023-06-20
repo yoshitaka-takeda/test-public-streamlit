@@ -1,3 +1,16 @@
+import subprocess
+import sys
+
+# Fungsi untuk menginstal dependensi menggunakan pip
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# Menginstal dependensi nltk
+try:
+    import nltk
+except ImportError:
+    install('nltk')
+    
 import streamlit as st,numpy as np,time
 
 # Import library yang diperlukan setelah dependensi terinstal
