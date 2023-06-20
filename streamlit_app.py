@@ -16,6 +16,7 @@ import streamlit as st,numpy as np,time
 # Import library yang diperlukan setelah dependensi terinstal
 import nltk
 nltk.download('punkt')
+nltk.download('stopwords')
 from nltk.sentiment import SentimentIntensityAnalyzer
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
