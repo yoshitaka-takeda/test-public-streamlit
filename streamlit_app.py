@@ -10,20 +10,22 @@ try:
     import nltk
 except ImportError:
     install('nltk')
-    nltk.download('punkt')
-    nltk.download('stopwords')
-    nltk.download('wordnet')
-    nltk.download('vader_lexicon')
     
 import streamlit as st,numpy as np,time
 
 # Import library yang diperlukan setelah dependensi terinstal
 import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('vader_lexicon')
 from nltk.sentiment import SentimentIntensityAnalyzer
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import re
+
+
 
 # Fungsi untuk membersihkan teks dari karakter khusus, mengubah menjadi huruf kecil, dan melakukan lemmatisasi
 def preprocess_text(text):
