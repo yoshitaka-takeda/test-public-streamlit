@@ -58,7 +58,7 @@ def sentiment_analysis(review):
     return sentiment, score
 
 # Baca dataset review novel
-dataset = pd.read_csv('reviewnovel.csv')  # Ganti 'dataset.csv' dengan nama file dataset Anda
+dataset = pd.read_csv('./reviewnovel.csv')  # Ganti 'dataset.csv' dengan nama file dataset Anda
 reviews = dataset['Review'].tolist()
 
 # Preprocessing dan vektorisasi teks
